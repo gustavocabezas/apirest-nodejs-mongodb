@@ -6,8 +6,9 @@ const userRoutes = require("./routes/user");
 const app = express();
 const port = process.env.PORT || 9000;
 
-// middleware
 app.use(express.json());
+
+// middleware
 app.use('/api', userRoutes);
 
 app.get('/', (req, res) => {
